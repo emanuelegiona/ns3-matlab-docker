@@ -81,9 +81,8 @@ However, _utility scripts_ are only provided for UNIX-like systems.
 
 6. Be aware that, prior to its usage with hereby Docker images, all MATLAB code must be compiled under a licensed MATLAB environment comprehensive of [MATLAB Compiler][matlab-compiler].
 
-    Please ensure that the desired Docker image is bundled with a MATLAB Runtime version **greater or equal** than that of your MATLAB installation.
-
-    For instance: `ns3-matlab:base-n3.40-m2023b` supports executables created by MATLAB w/ Compiler versions _up to_ 2023b (included).
+    **N.B.** Please ensure that the desired Docker image is bundled with a MATLAB Runtime version **equal** to that of your MATLAB installation.<br>
+    _For instance:_ `ns3-matlab:base-n3.40-m2023b` supports executables created by MATLAB w/ Compiler version 2023b only, regardless of Update number ([more details here][mcr-versions]).
 
     Please refer to [MATLAB Compiler instructions][matlab-mcc-linux] for compiling your MATLAB source code into Linux-compatible executables.
 
@@ -219,6 +218,7 @@ All installed packages may also be subject to their own license, and the license
 
 [docker-install]: https://docs.docker.com/engine/install/
 [matlab-compiler]: https://www.mathworks.com/products/compiler.html
+[mcr-versions]: https://www.mathworks.com/matlabcentral/answers/500382-is-the-matlab-runtime-compatible-with-files-compiled-with-an-older-version-of-the-compiler
 [matlab-mcc-linux]: https://www.mathworks.com/help/compiler/
 
 [ns3-builds]: https://www.nsnam.org/docs/release/3.40/tutorial/html/getting-started.html#build-profiles
