@@ -11,13 +11,20 @@ Please refer to [`ns3-base`][ns3-base] or [`ns3-woss`][ns3-woss] repositories fo
 
 Docker image name: [**`egiona/ns3-matlab`**][docker-hub-matlab].
 
-| Docker image tag | Base image <br> `egiona/ns3-base` | MATLAB Runtime | Dockerfile |
+_Based on `egiona/ns3-base`_
+| Docker image tag | `egiona/ns3-base` | MATLAB Runtime | Dockerfile |
 | :---: | :---: | :---: | :---: |
-| [`base-n3.40-m2022b`][image-base1] | [`u22.04-n3.40`][base1] | [2022b][matlab-changelog] | [link][file-base1] |
+| [`base-n3.40-m2023b`][image-base3] | [`u22.04-n3.40`][base3] | [2023b][matlab-changelog] (Update 6) | [link][file-base3] |
+| [`base-n3.40-m2023a`][image-base3] | [`u22.04-n3.40`][base2] | [2023a][matlab-changelog] (Update 6) | [link][file-base2] |
+| [`base-n3.40-m2022b`][image-base1] | [`u22.04-n3.40`][base1] | [2022b][matlab-changelog] (Update 8) | [link][file-base1] |
 
-| Docker image tag | Base image <br> `egiona/ns3-woss` | MATLAB Runtime | Dockerfile |
+___
+_Based on `egiona/ns3-woss`_
+| Docker image tag | `egiona/ns3-woss` | MATLAB Runtime | Dockerfile |
 | :---: | :---: | :---: | :---: |
-| [`woss-n3.40-m2022b`][image-woss1] | [`u22.04-n3.40-w1.12.6`][woss1] | [2022b][matlab-changelog] | [link][file-woss1] |
+| [`woss-n3.40-m2023b`][image-woss3] | [`u22.04-n3.40-w1.12.6`][woss3] | [2023b][matlab-changelog] (Update 6) | [link][file-woss3] |
+| [`woss-n3.40-m2023a`][image-woss2] | [`u22.04-n3.40-w1.12.6`][woss2] | [2023a][matlab-changelog] (Update 6) | [link][file-woss2] |
+| [`woss-n3.40-m2022b`][image-woss1] | [`u22.04-n3.40-w1.12.6`][woss1] | [2022b][matlab-changelog] (Update 8) | [link][file-woss1] |
 
 Full changelog can be found at [this page](./CHANGELOG.md).
 
@@ -76,7 +83,7 @@ However, _utility scripts_ are only provided for UNIX-like systems.
 
     Please ensure that the desired Docker image is bundled with a MATLAB Runtime version **greater or equal** than that of your MATLAB installation.
 
-    For instance: `ns3-matlab:base-n3.40-m2022b` supports executables created by MATLAB w/ Compiler versions _up to_ 2022b (included).
+    For instance: `ns3-matlab:base-n3.40-m2023b` supports executables created by MATLAB w/ Compiler versions _up to_ 2023b (included).
 
     Please refer to [MATLAB Compiler instructions][matlab-mcc-linux] for compiling your MATLAB source code into Linux-compatible executables.
 
@@ -135,14 +142,14 @@ If you use any of the Docker images described in this repository, please cite th
 
 **APA**
 ```
-Giona, E. ns-3 and MATLAB Runtime Docker images [Computer software]. https://doi.org/TODO
+Giona, E. ns-3 and MATLAB Runtime Docker images [Computer software]. https://doi.org/10.5281/zenodo.10671738
 ```
 
 **BibTeX**
 ```
 @software{Giona_ns-3_and_MATLAB,
 author = {Giona, Emanuele},
-doi = {TODO},
+doi = {10.5281/zenodo.10671738},
 license = {MIT},
 title = {{ns-3 and MATLAB Runtime Docker images}},
 url = {https://github.com/emanuelegiona/ns3-matlab-docker}
@@ -185,13 +192,29 @@ All installed packages may also be subject to their own license, and the license
 [latest-makefile]: https://github.com/emanuelegiona/ns3-base-docker/u22.04-n3.40/ns3-utils/Makefile
 
 <!-- Base: ns3-base -->
+[image-base3]: https://hub.docker.com/r/egiona/ns3-matlab/tags?page=1&name=base-n3.40-m2023b
+[image-base2]: https://hub.docker.com/r/egiona/ns3-matlab/tags?page=1&name=base-n3.40-m2023a
 [image-base1]: https://hub.docker.com/r/egiona/ns3-matlab/tags?page=1&name=base-n3.40-m2022b
+
+[base3]: https://hub.docker.com/r/egiona/ns3-base/tags?page=1&name=u22.04-n3.40
+[base2]: https://hub.docker.com/r/egiona/ns3-base/tags?page=1&name=u22.04-n3.40
 [base1]: https://hub.docker.com/r/egiona/ns3-base/tags?page=1&name=u22.04-n3.40
+
+[file-base3]: ./base-n3.40-m2023b/Dockerfile
+[file-base2]: ./base-n3.40-m2023a/Dockerfile
 [file-base1]: ./base-n3.40-m2022b/Dockerfile
 
 <!-- Base: ns3-woss -->
+[image-woss3]: https://hub.docker.com/r/egiona/ns3-matlab/tags?page=1&name=woss-n3.40-m2023b
+[image-woss2]: https://hub.docker.com/r/egiona/ns3-matlab/tags?page=1&name=woss-n3.40-m2023a
 [image-woss1]: https://hub.docker.com/r/egiona/ns3-matlab/tags?page=1&name=woss-n3.40-m2022b
+
+[woss3]: https://hub.docker.com/r/egiona/ns3-woss/tags?page=1&name=u22.04-n3.40-w1.12.6
+[woss2]: https://hub.docker.com/r/egiona/ns3-woss/tags?page=1&name=u22.04-n3.40-w1.12.6
 [woss1]: https://hub.docker.com/r/egiona/ns3-woss/tags?page=1&name=u22.04-n3.40-w1.12.6
+
+[file-woss3]: ./woss-n3.40-m2023b/Dockerfile
+[file-woss2]: ./woss-n3.40-m2023a/Dockerfile
 [file-woss1]: ./woss-n3.40-m2022b/Dockerfile
 
 [docker-install]: https://docs.docker.com/engine/install/
